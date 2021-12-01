@@ -17,9 +17,9 @@ def progon(a, b):
     v[n-1] = 0
     u[n-1] = (a[n-1][n-2]*u[n-2] - b[n-1]) / (-a[n-1][n-1] - a[n-1][n-2]*v[n-2])
     
-    print('Коэффициент v:')
+    print('Коэффициент u:')
     [print(f"v{i+1} = {round(v[i],4)}") for i in range(len(v))]
-    print('\nКоэффициент u:')
+    print('\nКоэффициент v:')
     [print(f"u{i+1} = {round(u[i],4)}") for i in range(len(u))]
     
     # Обратный ход
