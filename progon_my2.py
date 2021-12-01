@@ -50,6 +50,17 @@ def main(fil = 'matrix.txt', eps = 4):
 
 	with open('ans3.txt', 'w') as f:
 		f.write(str(x))
+		
+		print()	
+	for i in range(4):
+		st_out = ''
+		for j in range(4):
+			#print(f"{a[i]}*{x[i]} + ")
+			st_out += f"{a[i][j]}*{round(x[i], eps)} + "
+		st_out = st_out[:-2]
+		st_out += f" = {b[i]}"
+	
+		print(st_out)
 	
 
 main()
