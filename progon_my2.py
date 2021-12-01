@@ -51,16 +51,20 @@ def main(fil = 'matrix.txt', eps = 4):
 	with open('ans3.txt', 'w') as f:
 		f.write(str(x))
 		
-		print()	
+	print()	
 	for i in range(4):
 		st_out = ''
+		s=0
 		for j in range(4):
 			#print(f"{a[i]}*{x[i]} + ")
-			st_out += f"{a[i][j]}*{round(x[i], eps)} + "
+			s+=a[i][j]*x[j]
+			st_out += f"{a[i][j]}*{round(x[j], eps)} + "
 		st_out = st_out[:-2]
-		st_out += f" = {b[i]}"
+		#st_out += f" = {b[i]}"
+		st_out += ' = '+str(s)
 	
 		print(st_out)
+
 	
 
 main()
